@@ -7,13 +7,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@NoArgsConstructor
+@AllArgsConstructor
 public class User {
 
     @Id
@@ -21,5 +20,5 @@ public class User {
     private Integer id; //Because of size of the project, Integer was used instead of Long.
     private String password;
     private String email;
-    private String Name;
+    private String name;
 }
