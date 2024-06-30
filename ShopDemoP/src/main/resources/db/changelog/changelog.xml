@@ -4,31 +4,4 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
 
-    <changeSet id="1" author="korney">
-        <comment>The letter "C" in names mean "Customer's" or "of Customer".</comment>
-        <createTable tableName="ordersC">
-            <column name="orderС_id" type="int" autoIncrement="true">
-                <constraints primaryKey="true"/>
-            </column>
-            <column name="name" type="varchar(50)"/>
-            <column name="sellerName" type="varchar(50)"/>
-        </createTable>
-    </changeSet>
-
-    <changeSet id="2" author="korney">
-        <comment>The letter "S" in names mean "Seller's" or "of Seller".</comment>
-        <createTable tableName="ordersS">
-            <column name="orderS_id" type="int" autoIncrement="true">
-                <constraints primaryKey="true"/>
-            </column>
-        </createTable>
-        <dropColumn tableName="event" columnName="city"/>
-        <addColumn tableName="event">
-            <column name="city_id" type="int"></column>
-        </addColumn>
-        <addForeignKeyConstraint baseTableName="event" baseColumnNames="city_id" constraintName="fk_event_city"
-                                 referencedTableName="city"
-                                 referencedColumnNames="city_id"/>
-    </changeSet>
-
 </databaseChangeLog>
