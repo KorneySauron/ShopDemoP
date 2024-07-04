@@ -12,26 +12,6 @@ management, authentication, and authorization, as well as interaction with a Pos
 - User management
 - PostgreSQL database integration
 
-## Project Structure
-src/
-├── main/
-│ ├── java/
-│ │ ├── com/
-│ │ │ ├── demop/
-│ │ │ │ ├── ShopDemoPApplication.java
-│ │ │ │ ├── config/
-│ │ │ │ │ └── SecurityConfig.java
-│ │ │ │ ├── controller/
-│ │ │ │ │ └── UserController.java
-│ │ │ │ ├── model/
-│ │ │ │ │ └── User.java
-│ │ │ │ ├── repository/
-│ │ │ │ │ └── UserRepository.java
-│ │ │ │ ├── service/
-│ │ │ │ │ └── UserService.java
-├── resources/
-│ ├── application.properties
-
 ## Prerequisites
 
 - Java 17
